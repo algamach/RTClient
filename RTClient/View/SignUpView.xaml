@@ -171,8 +171,7 @@
                                BorderThickness="0,0,0,2"
                                Height="28"
                                VerticalContentAlignment="Center"
-                               Margin="0,5,0,0"
-                               Padding="20,0,0,0">
+                               Margin="0,5,0,0">
                     </TextBox>
 
                     <TextBlock Text="Имя"
@@ -193,8 +192,7 @@
                                BorderThickness="0,0,0,2"
                                Height="28"
                                VerticalContentAlignment="Center"
-                               Margin="0,5,0,0"
-                               Padding="20,0,0,0">
+                               Margin="0,5,0,0">
                     </TextBox>
 
                     <TextBlock Text="Отчество"
@@ -215,8 +213,7 @@
                                BorderThickness="0,0,0,2"
                                Height="28"
                                VerticalContentAlignment="Center"
-                               Margin="0,5,0,0"
-                               Padding="20,0,0,0">
+                               Margin="0,5,0,0">
                     </TextBox>
 
 
@@ -238,8 +235,7 @@
                                BorderThickness="0,0,0,2"
                                Height="28"
                                VerticalContentAlignment="Center"
-                               Margin="0,5,0,0"
-                               Padding="20,0,0,0">
+                               Margin="0,5,0,0">
                     </TextBox>
 
                     <TextBlock Text="Пароль"
@@ -260,8 +256,7 @@
                                  BorderThickness="0,0,0,2"
                                  Height="28"
                                  VerticalContentAlignment="Center"
-                                 Margin="0,5,0,0"
-                                 Padding="20,0,0,0">
+                                 Margin="0,5,0,0">
                     </PasswordBox>
 
                     <StackPanel Margin="0,20,0,0"
