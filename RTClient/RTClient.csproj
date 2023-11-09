@@ -15,12 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\user-icon.png" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\" />
-    <Folder Include="Model\" />
+    <Resource Include="Images\user-icon.png" />
   </ItemGroup>
 
   <ItemGroup>
