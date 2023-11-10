@@ -12,7 +12,8 @@ namespace RTClient.Repositories
         private readonly string _connectionString;
         public RepositoryBase()
         {
-            _connectionString = "Server=(local); Database=RTdb; Integrated Security=true";
+            //_connectionString = "Server=(localdb)\\mssqllocaldb;Database=RTdb;Trusted_Connection=True;Integrated Security=true;";
+            _connectionString = "Server=DESKTOP-TR2CJF1\\SQLEXPRESS; Database=RTdb; Integrated Security=true;Trusted_Connection=True";
         }
         protected SqlConnection GetConnection()
         {

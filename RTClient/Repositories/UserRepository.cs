@@ -67,7 +67,7 @@ namespace RTClient.Repositories
                             FatherName = reader[3].ToString(),
                             UserName = reader[4].ToString(),
                             Password = string.Empty,
-                            OrgId = int.Parse(reader[5].ToString())
+                            OrgId = int.Parse(reader[6].ToString())
                         };
                     }
                 }
