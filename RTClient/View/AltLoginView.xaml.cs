@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using RTClient.Model;
+using RTClient.View;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -80,10 +81,10 @@ namespace RTClient.View
 
             if (table.Rows.Count == 1)
             {
-                MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
-                MainWindow mainWindow = new MainWindow();
+                //MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MainView mainView = new MainView(userName);
                 this.Close();
-                mainWindow.Show();
+                mainView.Show();
             }
             else
             {
