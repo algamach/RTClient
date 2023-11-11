@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using RTClient.Model;
+using RTClient.View;
 
 namespace RTClient.View
 {
@@ -60,7 +61,7 @@ namespace RTClient.View
             adapter.SelectCommand= command;
             adapter.Fill(table);
 
-            if (table.Rows.Count ==1)
+            if (table.Rows.Count == 1)
             {
                 MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
                 MainWindow mainWindow = new MainWindow();
@@ -75,12 +76,16 @@ namespace RTClient.View
 
         private void btnAltLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            AltLoginView altLoginView = new AltLoginView();
+            this.Close();
+            altLoginView.Show();
         }
 
         private void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
-
+            SignUpView signUpView = new SignUpView();
+            this.Close();
+            signUpView.Show();
         }
     }
 }

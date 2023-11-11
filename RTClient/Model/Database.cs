@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using Microsoft.Data.SqlClient;
 
 namespace RTClient.Model
@@ -32,7 +33,33 @@ namespace RTClient.Model
             return connection;
         }
 
+        public void loadElementToComboBox(string stringQuery, ComboBox myBox, string column)
+        {
+            List<string> columnValues = GetColumnValues(stringQuery, column);
+            foreach (string value in columnValues)
+            {
+                myBox.Items.Add(value);
+            }
+        }
+        public List<string> GetColumnValues(string query, string column)
+        {
+            List<string> columnValues = new List<string>();
 
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+
+            SqlCommand command = new SqlCommand(query, getConnection());
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            foreach (DataRow row in table.Rows)
+            {
+                // получаем все ячейки строки
+                columnValues.Add((string)row[column]);
+            }
+            return columnValues;
+        }
 
     }
 }

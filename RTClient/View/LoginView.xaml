@@ -259,7 +259,7 @@
 
                     <Button x:Name="btnSignIn"                          
                             BorderThickness="0"
-                            Content="Зарегистрироваться"
+                            Content="Регистрация"
                             Foreground="White"
                             FontSize="12"
                             FontFamily="Montserrat"

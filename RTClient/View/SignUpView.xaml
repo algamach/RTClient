@@ -145,7 +145,7 @@
                     <ComboBox x:Name="comboOrg"
                                 FontSize="13"
                                 FontWeight="Medium"
-                                Foreground="White"
+                                Foreground="Black"
                                 BorderBrush="DarkGray"
                                 BorderThickness="0,0,0,2"
                                 Height="28"
