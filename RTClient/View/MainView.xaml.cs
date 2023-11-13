@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -73,6 +74,8 @@ namespace RTClient.View
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
+            string input = txtSearch.Text.ToString();
+            //Regex regex = new Regex(@$"*{input}*", RegexOptions.IgnoreCase);
             searchResult.Clear();
 
             SqlDataAdapter adapter = new SqlDataAdapter();
@@ -82,12 +85,20 @@ namespace RTClient.View
             SqlCommand command = new SqlCommand(queryString, database.getConnection());
             adapter.SelectCommand = command;
             adapter.Fill(table);
-            for (int i =0;i<table.Rows.Count;i++)
+            string row = "";
+                        
+            for (int i = 0; i < table.Rows.Count; i++)
             {
-                searchResult.Text += "* ";
-                searchResult.Text += table.Rows[i]["Name"];
-                searchResult.Text += "\n";
-
+                row = table.Rows[i]["name"].ToString();
+                if (input == "")
+                {
+                    searchResult.Text += $"* {row}\n";
+                }
+                else
+                if (Regex.IsMatch(row, input, RegexOptions.IgnoreCase))
+                {
+                    searchResult.Text += $"* {row}\n";
+                }
             }
         }
     }
