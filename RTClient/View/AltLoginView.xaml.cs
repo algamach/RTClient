@@ -63,7 +63,9 @@ namespace RTClient.View
             try
             {
                 if (comboUser.SelectedItem == null)
-                    throw new Exception();
+                {
+                    throw new Exception("Проверьте логин");
+                }
                 var userName = comboUser.SelectedItem.ToString();
                 var password = txtPass.Password;
 
@@ -84,7 +86,7 @@ namespace RTClient.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка, проверте данные и попробуйте еще раз\n {ex.Message} ", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка, проверьте данные и попробуйте еще раз.\n{ex.Message} ", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -101,7 +103,5 @@ namespace RTClient.View
             signUpView.Show();
             Close();
         }
-
-
     }
 }

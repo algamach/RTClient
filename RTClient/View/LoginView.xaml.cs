@@ -35,14 +35,20 @@ namespace RTClient.View
 
         async private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            string userName = txtUser.Text;
-            string password = txtPass.Password;
-
-            string message = $"login+{userName}+{password}";
-            string response = await serverCommunication.SendMessageAndGetResponse(message);
-
             try
             {
+                string userName = txtUser.Text;
+                string password = txtPass.Password;
+
+                if ((userName=="") ||(password==""))
+                {
+                    throw new Exception("Введите логин и пароль");
+                }
+
+                string message = $"login+{userName}+{password}";
+                string response = await serverCommunication.SendMessageAndGetResponse(message);
+
+            
                 string[] responseArr = response.Split('+');
                 if (responseArr[1] == "true")
                 {
@@ -57,10 +63,9 @@ namespace RTClient.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка, проверте данные и попробуйте еще раз\n {ex.Message} ", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Ошибка, проверьте данные и попробуйте еще раз.\n{ex.Message} ", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
 
         private void btnAltLogin_Click(object sender, RoutedEventArgs e)
         {

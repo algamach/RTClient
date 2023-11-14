@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:RTClient.View"
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
+        Icon="/Images/win_logo.png"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -271,7 +272,7 @@
 
                     <Button x:Name="btnSignIn"                          
                         BorderThickness="0"
-                        Content="Зарегистрироваться"
+                        Content="Регистрация"
                         Foreground="White"
                         FontSize="12"
                         FontFamily="Montserrat"

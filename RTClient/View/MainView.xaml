@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:RTClient.View"
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
+        Icon="/Images/win_logo.png"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -233,7 +234,7 @@
                                HorizontalAlignment="Center"
                                Margin="0,15,0,0"/>
 
-                    <TextBlock Text="Вводите запрос: "
+                    <TextBlock Text="Введите запрос: "
                                Foreground="DarkGray"
                                FontSize="12"
                                FontWeight="Medium"

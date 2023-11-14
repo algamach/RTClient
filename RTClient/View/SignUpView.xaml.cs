@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace RTClient.View
 {
@@ -57,7 +46,7 @@ namespace RTClient.View
             var fatherName = txtFatherName.Text;
             var userName = txtUserName.Text;
             var password = txtPass.Password;
-            
+
             string message = $"signUp+{orgName}+{lastName}+{firstName}+{fatherName}+{userName}+{password}";
             string response = await serverCommunication.SendMessageAndGetResponse(message);
             string[] responseArr = response.Split('+');

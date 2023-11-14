@@ -12,6 +12,7 @@
     <None Remove="Images\key-icon.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\user-icon.png" />
+    <None Remove="Images\win_logo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +23,7 @@
     <Resource Include="Images\back-image.jpg" />
     <Resource Include="Images\key-icon.png" />
     <Resource Include="Images\logo.png" />
+    <Resource Include="Images\win_logo.png" />
   </ItemGroup>
 
 </Project>
