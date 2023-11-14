@@ -21,7 +21,7 @@ public class ServerCommunication
             byte[] data = Encoding.UTF8.GetBytes(message);
             await stream.WriteAsync(data, 0, data.Length);
 
-            byte[] responseBytes = new byte[256];
+            byte[] responseBytes = new byte[1024];
             int bytesRead = await stream.ReadAsync(responseBytes, 0, responseBytes.Length);
             return Encoding.UTF8.GetString(responseBytes, 0, bytesRead);
         }

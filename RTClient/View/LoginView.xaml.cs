@@ -46,7 +46,7 @@ namespace RTClient.View
                 string[] responseArr = response.Split('+');
                 if (responseArr[1] == "true")
                 {
-                    MainView mainView = new MainView(serverCommunication);
+                    MainView mainView = new MainView(serverCommunication, userName);
                     mainView.Show();
                     Close();
                 }
@@ -64,12 +64,16 @@ namespace RTClient.View
 
         private void btnAltLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            AltLoginView altLoginView = new AltLoginView(serverCommunication);
+            altLoginView.Show();
+            Close();
         }
 
         private void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
-
+            SignUpView signUpView = new SignUpView(serverCommunication);
+            signUpView.Show();
+            Close();
         }
     }
 }
