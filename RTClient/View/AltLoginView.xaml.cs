@@ -19,6 +19,7 @@ namespace RTClient.View
     /// </summary>
     public partial class AltLoginView : Window
     {
+        private ServerCommunication serverCommunication;
         public AltLoginView()
         {
             InitializeComponent();

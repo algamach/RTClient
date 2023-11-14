@@ -21,9 +21,11 @@ namespace RTClient.View
     /// </summary>
     public partial class MainView : Window
     {
-        public MainView()
+        private ServerCommunication serverCommunication;
+        public MainView(ServerCommunication serverCommunication)
         {
             InitializeComponent();
+            this.serverCommunication = serverCommunication;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -40,17 +42,18 @@ namespace RTClient.View
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-
         }
 
         private void btnSignOut_Click(object sender, RoutedEventArgs e)
         {
-            searchResult.Text = string.Empty;
+
+            LoginView loginView = new LoginView(serverCommunication);
+            loginView.Show();
+            Close();
         }
 
         private async void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-
 
         }
     }

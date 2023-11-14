@@ -19,6 +19,7 @@ namespace RTClient.View
     /// </summary>
     public partial class SignUpView : Window
     {
+        private ServerCommunication serverCommunication;
         public SignUpView()
         {
             InitializeComponent();
